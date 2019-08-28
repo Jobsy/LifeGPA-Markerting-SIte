@@ -217,6 +217,41 @@ main {
                 img {
                     
                 }
+
+                figcaption {
+                    font-family: Raleway;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 19px;
+                    /* identical to box height */
+
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    text-align: center;
+                    letter-spacing: 2px;
+
+                    color: #000000;
+                }
+                
+                p {
+                    font-family: Raleway;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+                    /* or 162% */
+
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+
+                    // color: #747E80;
+
+                    mix-blend-mode: normal;
+                    opacity: 0.9;
+                }
             }
         }
     }
@@ -308,6 +343,200 @@ main {
                  margin: 5%;
             }
         }
-
     }
+}
+
+
+.contactUs {
+    background-color: darkred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 80%;
+
+    p {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1.75px;
+
+
+        color: #747E80;
+        width: 50%;
+        text-align: center;
+        // background-color: green;
+    }
+
+    figure {
+        background-color: sandybrown;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        
+        img {
+            // background-color: aqua
+            opacity: 0.25;
+        }
+    }
+
+    hr {
+        width: 100%;
+        border: 1px solid #c2c2c2;
+    }
+
+    h2 {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 50px;
+        /* identical to box height, or 114% */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.244444px;
+
+        color: #2F2F2F;
+    }
+
+    .usersInfo {
+        background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 60%;
+
+
+        input {
+            background: #F3F3F3;
+            width: 180px;
+            // height: 50px;
+            padding: 2%;
+            border-radius: 40px;
+        }
+
+        ::placeholder {
+            width:  138px;
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: flex-end;
+
+            color: #303234;
+
+            mix-blend-mode: normal;
+            opacity: 0.7;
+        }
+
+        button {
+            background: #FFEB38;
+            border-radius: 40px;
+
+            width: 210px;
+            padding: 2%;
+
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.198681);
+
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            letter-spacing: 1.75px;
+
+            color: #000000;
+        }
+    }
+}
+
+
+footer {
+    background-color: violet;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 80%;
+    
+    div{
+        flex: 1;
+
+        img {
+            width: 25%;
+            height: auto;
+        }
+        
+        p{
+            font-family: Playfair Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 26px;
+            /* or 162% */
+
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+
+            mix-blend-mode: normal;
+            opacity: 0.8;
+        }
+
+        .boldP {
+            font-weight: bold;
+        }
+
+        // .socialMedia {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     img {
+        //         background-color: #000000;
+        //         width: 7%;
+        //         // height: 5%;
+        //     }
+
+            
+        // }
+        // .fb, .tbl {
+        //     background-color: orange;
+        //     width: 5%;
+        // }
+    }
+    .socialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        img {
+            background-color: #000000;
+            width: 7%;
+            // height: 5%;
+            margin-right: 10%;
+        }
+        
+        .fb, .tbl {
+                background-color: orange;
+                width: 4%;
+            } 
+    }
+    
 }
