@@ -217,7 +217,7 @@ table {
 .section1 .banner .bannerText figure {
   background-color: tomato;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 25%;
 }
 .section1 .banner .bannerText figure img {
   width: 25%;
@@ -231,7 +231,7 @@ table {
   justify-content: flex-end;
 }
 .section1 .banner .bannerBackgroundImage img {
-  width: 50%;
+  width: auto;
   height: auto;
 }
 main {
@@ -244,7 +244,6 @@ main {
 }
 main .mainArticle1 {
   background-color: rosybrown;
-  width: 100%;
 }
 main .mainArticle1 header {
   display: flex;
@@ -291,4 +290,71 @@ main .mainArticle1 div figure {
   flex-direction: column;
   width: 320px;
   margin: 2%;
+}
+main .mainArticle2 {
+  background-color: crimson;
+  width: 100%;
+}
+main .mainArticle2 header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .mainArticle2 header h2 {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 50px;
+  /* identical to box height, or 114% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #2F2F2F;
+}
+main .mainArticle2 div {
+  background-color: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .mainArticle2 div aside {
+  background-color: #6b3485;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .mainArticle2 div aside div {
+  background-color: #95cbe0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6% 0;
+}
+main .mainArticle2 div aside div h3 {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height, or 127% */
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+main .mainArticle2 div aside div p {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+  color: #747E80;
+}
+main .mainArticle2 div figure {
+  background-color: green;
+  margin: 5%;
 }
