@@ -1,1 +1,144 @@
 @import "reset.less";
+
+
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 1400px;
+
+    background-color: aqua;
+}
+
+.section1 {
+    background-color: blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    header {
+        background-color:red;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // flex-direction: column;
+        width: 80%;
+        height: 10%;
+        // flex: 1;
+
+        nav {
+            background-color:yellow;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            figure {
+                background-color:firebrick;
+
+                width: 20%;
+                
+                img {
+                    width: 25%;
+                    height: auto;
+                }
+            }
+
+            ul {
+            background-color: aquamarine;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+                li {
+                    margin: 0 2%;
+                }
+            }
+        }  
+    }
+
+    .banner {
+        background-color: blanchedalmond;
+
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .bannerText {
+            background-color: olive;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+
+            h1 {
+                font-family: Raleway;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 400%;
+                line-height: 106%;
+                /* or 64px */
+
+                display: flex;
+                align-items: center;
+                color: #000000;
+            }
+
+            h3 {
+                font-family: Raleway, "Rajdhani";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 125%;
+                line-height: 162.5%;
+                /* or 25px*/
+
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.1px;
+                margin-top: 2%;
+
+                color: #000000;
+            }
+
+            figure {
+                background-color: tomato;
+
+                width: 100%;
+                margin-top: 10%;
+
+                img {
+                    width: 25%;
+                    height: auto;
+                }
+            }
+        }
+
+        .bannerBackgroundImage {
+            background-color: indigo;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            justify-content: flex-end;
+
+            img {
+                width: 50%;
+                height: auto;
+
+            }
+        }
+    }
+}
