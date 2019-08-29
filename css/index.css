@@ -462,7 +462,6 @@ main .mainArticle2 div aside div {
   flex-direction: column;
   margin: 6% 0;
   max-width: 320px;
-  max-height: 200px;
 }
 main .mainArticle2 div aside div h3 {
   font-weight: bold;
