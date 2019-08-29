@@ -131,12 +131,27 @@ button {
   padding: 0;
   margin: 0;
 }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  height: 100%;
+  font-family: Raleway;
+  font-style: normal;
+}
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   max-width: 1400px;
+  width: 100%;
   background-color: aqua;
 }
 .section1 {
@@ -154,6 +169,18 @@ button {
   justify-content: center;
   width: 80%;
   height: 10%;
+}
+@media (min-width: 640px) and (max-width: 812px) {
+  .section1 header {
+    background-color: teal;
+    width: 98%;
+  }
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  .section1 header {
+    background-color: hotpink;
+    width: 98%;
+  }
 }
 .section1 header nav {
   background-color: yellow;
@@ -180,6 +207,16 @@ button {
 .section1 header nav ul li {
   margin: 0 2%;
 }
+.section1 header nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  color: black;
+}
 .section1 .banner {
   background-color: blanchedalmond;
   width: 80%;
@@ -187,19 +224,25 @@ button {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 640px) and (max-width: 812px) {
+  .section1 .banner {
+    background-color: teal;
+    width: 98%;
+  }
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  .section1 .banner {
+    background-color: hotpink;
+    width: 98%;
+  }
+}
 .section1 .banner .bannerText {
   background-color: olive;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
   width: 50%;
 }
 .section1 .banner .bannerText h1 {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 800;
-  font-size: 400%;
+  font-size: 6.4rem;
   line-height: 106%;
   /* or 64px */
   display: flex;
@@ -207,10 +250,8 @@ button {
   color: #000000;
 }
 .section1 .banner .bannerText h3 {
-  font-family: Raleway, "Rajdhani";
-  font-style: normal;
   font-weight: 500;
-  font-size: 125%;
+  font-size: 2rem;
   line-height: 162.5%;
   /* or 25px*/
   display: flex;
@@ -228,6 +269,22 @@ button {
   width: 25%;
   height: auto;
 }
+@media (min-width: 415px) and (max-width: 639px) {
+  .section1 .banner .bannerText {
+    flex: 1;
+  }
+  .section1 .banner .bannerText h1 {
+    font-size: 5.8rem;
+  }
+  .section1 .banner .bannerText figure {
+    width: 100%;
+    margin-top: 20%;
+  }
+  .section1 .banner .bannerText figure img {
+    width: 25%;
+    height: auto;
+  }
+}
 .section1 .banner .bannerBackgroundImage {
   background-color: indigo;
   width: 50%;
@@ -236,16 +293,29 @@ button {
   justify-content: flex-end;
 }
 .section1 .banner .bannerBackgroundImage img {
-  width: auto;
+  width: 100%;
   height: auto;
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  .section1 .banner .bannerBackgroundImage {
+    display: none;
+  }
 }
 main {
   background-color: hotpink;
   width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+}
+@media (min-width: 640px) and (max-width: 812px) {
+  main {
+    background-color: teal;
+    width: 98%;
+  }
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  main {
+    background-color: hotpink;
+    width: 98%;
+  }
 }
 main .mainArticle1 {
   background-color: rosybrown;
@@ -257,10 +327,8 @@ main .mainArticle1 header {
   flex-direction: column;
 }
 main .mainArticle1 header h2 {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 800;
-  font-size: 44px;
+  font-size: 4.4rem;
   line-height: 114%;
   /* identical to box height, or 50px */
   display: flex;
@@ -269,16 +337,19 @@ main .mainArticle1 header h2 {
   color: #2F2F2F;
 }
 main .mainArticle1 header p {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  /* or 156% */
+  font-size: 1.8rem;
+  line-height: 156%;
+  /* or 28px */
   display: flex;
   align-items: center;
   text-align: center;
   color: #747E80;
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  main .mainArticle1 header h2 {
+    font-size: 3.5rem;
+  }
 }
 main .mainArticle1 div {
   background-color: orange;
@@ -286,6 +357,7 @@ main .mainArticle1 div {
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 main .mainArticle1 div figure {
   background-color: forestgreen;
@@ -294,28 +366,24 @@ main .mainArticle1 div figure {
   justify-content: stretch;
   flex-direction: column;
   max-width: 320px;
-  margin: 2%;
+  margin: 2% 1%;
 }
 main .mainArticle1 div figure figcaption {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 2rem;
   line-height: 19px;
   /* identical to box height */
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  text-align: center;
+  flex-direction: column;
   letter-spacing: 2px;
   color: #000000;
   margin: 0 0 2% 0;
 }
 main .mainArticle1 div figure p {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 162%;
   /* or 26px */
   display: flex;
@@ -335,16 +403,19 @@ main .mainArticle2 header {
   flex-direction: column;
 }
 main .mainArticle2 header h2 {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 800;
-  font-size: 44px;
+  font-size: 4.4rem;
   line-height: 114%;
   /* identical to box height, or 50px*/
   display: flex;
   align-items: center;
   text-align: center;
   color: #2F2F2F;
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  main .mainArticle2 header h2 {
+    font-size: 3.5rem;
+  }
 }
 main .mainArticle2 div {
   background-color: greenyellow;
@@ -370,10 +441,8 @@ main .mainArticle2 div aside div {
   max-height: 200px;
 }
 main .mainArticle2 div aside div h3 {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 2.2rem;
   line-height: 127%;
   /* identical to box height, or 28px */
   display: flex;
@@ -381,17 +450,27 @@ main .mainArticle2 div aside div h3 {
   color: #000000;
 }
 main .mainArticle2 div aside div p {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  /* or 156% */
+  font-size: 1.8rem;
+  line-height: 156%;
+  /* or  28px*/
   color: #747E80;
 }
 main .mainArticle2 div figure {
   background-color: green;
   margin: 5%;
+}
+main .mainArticle2 div figure img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  main .mainArticle2 div figure {
+    margin: 1%;
+  }
+  main .mainArticle2 div figure img {
+    display: none;
+  }
 }
 .contactUs {
   background-color: darkred;
@@ -401,11 +480,21 @@ main .mainArticle2 div figure {
   flex-direction: column;
   width: 80%;
 }
+@media (min-width: 640px) and (max-width: 812px) {
+  .contactUs {
+    background-color: teal;
+    width: 98%;
+  }
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  .contactUs {
+    background-color: hotpink;
+    width: 98%;
+  }
+}
 .contactUs p {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 16px;
   display: flex;
   align-items: center;
@@ -421,19 +510,19 @@ main .mainArticle2 div figure {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  flex-wrap: wrap;
 }
 .contactUs figure img {
   opacity: 0.25;
+  margin: 0 2%;
 }
 .contactUs hr {
   width: 100%;
   border: 1px solid #c2c2c2;
 }
 .contactUs h2 {
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 4.4rem;
   line-height: 114%;
   /* identical to box height, or 50px */
   display: flex;
@@ -457,10 +546,8 @@ main .mainArticle2 div figure {
 }
 .contactUs .usersInfo ::placeholder {
   width: 138px;
-  font-family: Raleway;
-  font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 16px;
   display: flex;
   align-items: flex-end;
@@ -474,10 +561,8 @@ main .mainArticle2 div figure {
   max-width: 210px;
   padding: 2%;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.198681);
-  font-family: Raleway;
-  font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 16px;
   display: flex;
   align-items: flex-end;
@@ -486,12 +571,29 @@ main .mainArticle2 div figure {
   letter-spacing: 1.75px;
   color: #000000;
 }
+@media (min-width: 415px) and (max-width: 639px) {
+  .contactUs h2 {
+    font-size: 4rem;
+  }
+}
 footer {
   background-color: violet;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   width: 80%;
+}
+@media (min-width: 640px) and (max-width: 812px) {
+  footer {
+    background-color: teal;
+    width: 98%;
+  }
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  footer {
+    background-color: hotpink;
+    width: 98%;
+  }
 }
 footer div {
   flex: 1;
@@ -502,9 +604,8 @@ footer div img {
 }
 footer div p {
   font-family: Playfair Display;
-  font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1.4rem;
   line-height: 26px;
   /* or 162% */
   display: flex;
@@ -530,4 +631,15 @@ footer .socialMedia .fb,
 footer .socialMedia .tbl {
   background-color: orange;
   width: 4%;
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  footer .socialMedia img {
+    width: 17%;
+    margin-right: 5%;
+  }
+  footer .socialMedia .fb,
+  footer .socialMedia .tbl {
+    background-color: orange;
+    width: 10%;
+  }
 }

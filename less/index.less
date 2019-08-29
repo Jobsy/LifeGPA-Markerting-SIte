@@ -1,15 +1,28 @@
 @import "reset.less";
 
+body {
+    height: 100%;
+    font-family: Raleway;
+    font-style: normal;
+}
 
 
-.wrapper {
+.my-flex-container() {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+
+
+
+.wrapper {
+    
+    .my-flex-container();
 
     max-width: 1400px;
-    // width: 100vw;
+    width: 100%;
 
     background-color: aqua;
 }
@@ -17,10 +30,9 @@
 .section1 {
     background-color: blue;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    .my-flex-container();
+    
+
     width: 100%;
 
     header {
@@ -29,10 +41,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // flex-direction: column;
+        
         width: 80%;
         height: 10%;
-        // flex: 1;
+        .for-tablet-portait-only();
+        .for-phone-portait-only();
+        
 
         nav {
             background-color:yellow;
@@ -63,6 +77,20 @@
 
                 li {
                     margin: 0 2%;
+                    
+                    a {
+                        text-decoration: none;
+                        
+                        font-weight: 600;
+                        font-size: 1.8rem;
+                        line-height: 14px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 2px;
+
+                        color: black;
+                    }
                 }
             }
         }  
@@ -72,6 +100,9 @@
         background-color: blanchedalmond;
 
         width: 80%;
+        .for-tablet-portait-only();
+        .for-phone-portait-only();
+
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -79,17 +110,16 @@
         .bannerText {
             background-color: olive;
 
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-direction: column;
+            // display: flex;
+            // align-items: flex-start;
+            // justify-content: center;
+            // flex-direction: column;
             width: 50%;
 
             h1 {
-                font-family: Raleway;
-                font-style: normal;
+               
                 font-weight: 800;
-                font-size: 400%;
+                font-size: 6.4rem;
                 line-height: 106%;
                 /* or 64px */
 
@@ -99,10 +129,8 @@
             }
 
             h3 {
-                font-family: Raleway, "Rajdhani";
-                font-style: normal;
                 font-weight: 500;
-                font-size: 125%;
+                font-size: 2rem;
                 line-height: 162.5%;
                 /* or 25px*/
 
@@ -125,6 +153,25 @@
                     height: auto;
                 }
             }
+            @media (min-width: 415px) and (max-width: 639px) { 
+               flex: 1;
+               
+               h1 {
+               
+                font-size: 5.8rem;
+                }
+               figure {
+                // background-color: tomato;
+
+                width: 100%;
+                margin-top: 20%;
+
+                img {
+                    width: 25%;
+                    height: auto;
+                }
+            }
+            }
         }
 
         .bannerBackgroundImage {
@@ -136,8 +183,21 @@
             justify-content: flex-end;
 
             img {
-                width: auto;
+                width: 100%;
                 height: auto;
+
+                // @media (min-width: 415px) and (max-width: 539px) { 
+                //     background-color: yellow;
+            
+                //     // display: none;
+                    
+                // }
+            }
+            @media (min-width: 415px) and (max-width: 639px) { 
+                // background-color: yellow;
+        // width: 25%;
+                display: none;
+                
             }
         }
     }
@@ -147,11 +207,13 @@
 main {
     background-color: hotpink;
     width: 80%;
+    .for-tablet-portait-only();
+    .for-phone-portait-only();
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
 
     .mainArticle1 {
         background-color: rosybrown;
@@ -159,16 +221,13 @@ main {
         // width: 100%;
 
         header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+           
+            .my-flex-container();
 
             h2 {
-                font-family: Raleway;
-                font-style: normal;
                 font-weight: 800;
-                font-size: 44px;
+                font-size: 4.4rem;
+                // font-size: 44px;
                 line-height: 114%;
                 /* identical to box height, or 50px */
 
@@ -180,12 +239,11 @@ main {
             }
 
             p {
-                font-family: Raleway;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 28px;
-                /* or 156% */
+               font-weight: 500;
+                font-size: 1.8rem;
+                // font-size: 18px;
+                line-height: 156%;
+                /* or 28px */
 
                 display: flex;
                 align-items: center;
@@ -193,6 +251,12 @@ main {
 
                 color: #747E80;
 
+            }
+
+            @media (min-width: 415px) and (max-width: 639px) {
+            h2 {
+                font-size: 3.5rem;
+            }
             }
         }
 
@@ -203,6 +267,7 @@ main {
             align-content: center;
             justify-content: center;
             flex-wrap: wrap;
+            width: 100%;
 
             figure {
                 background-color: forestgreen;
@@ -213,24 +278,23 @@ main {
                 flex-direction: column;
                 max-width: 320px;
                 // padding: 2%;
-                margin: 2%;
+                margin: 2% 1%;
 
                 // img {
-                    
+                //     width: 100%;
+                //     height: auto;
                 // }
 
                 figcaption {
-                    font-family: Raleway;
-                    font-style: normal;
-                    font-weight: bold;
-                    font-size: 16px;
+                     font-weight: bold;
+                    font-size: 2rem;
+                    // font-size: 16px;
                     line-height: 19px;
                     /* identical to box height */
 
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: center;
-                    text-align: center;
+                    .my-flex-container();
+
+
                     letter-spacing: 2px;
 
                     color: #000000;
@@ -238,10 +302,9 @@ main {
                 }
                 
                 p {
-                    font-family: Raleway;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
+                     font-weight: 500;
+                    // font-size: 16px;
+                    font-size: 1.6rem;
                     line-height: 162%;
                     /* or 26px */
 
@@ -259,24 +322,18 @@ main {
     }
 
     .mainArticle2 {
-        // display: flex;
-        // align-content: center;
-        // justify-content: center;
-        // flex-direction: column;
+      
         background-color: crimson;
         width: 100%;
 
         header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+           
+            .my-flex-container();
 
             h2 {
-                font-family: Raleway;
-                font-style: normal;
                 font-weight: 800;
-                font-size: 44px;
+                font-size: 4.4rem;
+                // font-size: 44px;
                 line-height: 114%;
                 /* identical to box height, or 50px*/
 
@@ -286,6 +343,12 @@ main {
 
                 color: #2F2F2F;
             }
+
+            @media (min-width: 415px) and (max-width: 639px) {
+                h2 {
+                    font-size: 3.5rem;
+                }
+                }
         }
 
         div {
@@ -296,27 +359,26 @@ main {
 
             aside {
                 background-color: rgb(107, 52, 133);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
+                
+                .my-flex-container();
 
                 div {
                     background-color: rgb(149, 203, 224);
+                    
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-start;
                     flex-direction: column;
+                    
                     margin: 6% 0;
                     // padding: 2%;
                     max-width: 320px;
                     max-height: 200px;
 
                     h3 {
-                        font-family: Raleway;
-                        font-style: normal;
                         font-weight: bold;
-                        font-size: 22px;
+                        font-size: 2.2rem;
+                        // font-size: 22px;
                         line-height: 127%;
                         /* identical to box height, or 28px */
 
@@ -327,12 +389,11 @@ main {
                     }
 
                     p {
-                        font-family: Raleway;
-                        font-style: normal;
                         font-weight: 500;
-                        font-size: 18px;
-                        line-height: 28px;
-                        /* or 156% */
+                        font-size: 1.8rem;
+                        // font-size: 18px;
+                        line-height: 156%;
+                        /* or  28px*/
 
 
                         color: #747E80;
@@ -345,6 +406,21 @@ main {
                  background-color: green;
                  
                  margin: 5%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            
+            @media (min-width: 415px) and (max-width: 639px) {
+                // aside {
+                //     flex: 1;
+                // }
+                margin: 1%;
+                img {
+                    display: none;
+                }
+                } 
             }
         }
     }
@@ -353,18 +429,26 @@ main {
 
 .contactUs {
     background-color: darkred;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    
+    .my-flex-container();
 
     width: 80%;
+    .for-tablet-portait-only();
+    .for-phone-portait-only();
+    // @media (min-width: 415px) and (max-width: 539px) {
+    //     figure {
+    //         // flex-direction: column;
+    //         flex-wrap: wrap;
+    //     }
+    //     h2 {
+    //         font-size: 1rem;
+    //     }
+    // }
 
     p {
-        font-family: Raleway;
-        font-style: normal;
         font-weight: 500;
-        font-size: 14px;
+        // font-size: 87.5%;
+        font-size: 1.4rem;
         line-height: 16px;
         display: flex;
         align-items: center;
@@ -380,14 +464,19 @@ main {
 
     figure {
         background-color: sandybrown;
+        
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         width: 100%;
+
+        flex-wrap: wrap;       
+        
         
         img {
             // background-color: aqua
             opacity: 0.25;
+            margin: 0 2%;
         }
     }
 
@@ -397,10 +486,9 @@ main {
     }
 
     h2 {
-        font-family: Raleway;
-        font-style: normal;
         font-weight: 900;
-        font-size: 44px;
+        font-size: 4.4rem;
+        // font-size: 44px;
         line-height: 114%;
         /* identical to box height, or 50px */
 
@@ -431,10 +519,8 @@ main {
 
         ::placeholder {
             width:  138px;
-            font-family: Raleway;
-            font-style: normal;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 1.4rem;
             line-height: 16px;
             display: flex;
             align-items: flex-end;
@@ -454,10 +540,8 @@ main {
 
             box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.198681);
 
-            font-family: Raleway;
-            font-style: normal;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 1.4rem;
             line-height: 16px;
             display: flex;
             align-items: flex-end;
@@ -466,6 +550,19 @@ main {
             letter-spacing: 1.75px;
 
             color: #000000;
+        }
+    }
+    @media (min-width: 415px) and (max-width: 639px) {
+        // figure {
+            // flex-direction: column;
+            // flex-wrap: wrap;
+            // // width: 80%;
+            // img{
+            //     margin: 0 2%;
+            // }
+        // }
+        h2 {
+            font-size: 4rem;
         }
     }
 }
@@ -478,6 +575,10 @@ footer {
     justify-content: center;
 
     width: 80%;
+    .for-tablet-portait-only();
+    .for-phone-portait-only();
+
+    
     
     div{
         flex: 1;
@@ -489,9 +590,9 @@ footer {
         
         p{
             font-family: Playfair Display;
-            font-style: normal;
+            // font-style: normal;
             font-weight: normal;
-            font-size: 16px;
+            font-size: 1.4rem;
             line-height: 26px;
             /* or 162% */
 
@@ -508,22 +609,6 @@ footer {
             font-weight: bold;
         }
 
-        // .socialMedia {
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     img {
-        //         background-color: #000000;
-        //         width: 7%;
-        //         // height: 5%;
-        //     }
-
-            
-        // }
-        // .fb, .tbl {
-        //     background-color: orange;
-        //     width: 5%;
-        // }
     }
     .socialMedia {
         display: flex;
@@ -541,6 +626,117 @@ footer {
                 background-color: orange;
                 width: 4%;
             } 
+
+            @media (min-width: 415px) and (max-width: 639px) {
+                img {
+                    // background-color: #000000;
+                    width: 17%;
+                    // height: 5%;
+                    margin-right: 5%;
+                }
+                
+                .fb, .tbl {
+                        background-color: orange;
+                        width: 10%;
+                    } 
+            }
     }
     
 }
+
+
+
+
+@backgroundColor: purple;
+
+.for-phone-only() {
+    @media (max-width: 599px) { background-color: purple }
+  }
+  .for-phone-only() {
+    @media (max-width: 599px) { background-color: red; }
+  }
+  .for-tablet-portrait-up() {
+    // @media (min-width: 600px) { background-color: green; }
+    @media (max-width: 600px) { background-color: green; }
+  }
+//   .for-tablet-portait-only() {
+//     @media (min-width: 600px) and (max-width: 899px) { background-color: teal;}
+    
+
+.for-phone-only() {
+    @media (min-width: 320px) and (max-width: 415px) { 
+        background-color: red;
+
+        width: 98%;
+    }
+  }
+
+  .for-phone-portait-only() {
+    @media (min-width: 415px) and (max-width: 639px) { 
+        background-color: hotpink;
+
+        width: 98%;
+        
+    }
+  }
+
+.for-tablet-portait-only() {
+    @media (min-width: 640px) and (max-width: 812px) { 
+        background-color: teal;
+
+        width: 98%;
+    }
+    
+  }
+  .for-tablet-landscape-up() {
+    @media (min-width: 900px) { background-color: rgb(42, 53, 23); }
+  }
+  .for-tablet-landscape-only() {
+    @media (min-width: 900px) and (max-width: 1199px) { background-color: tomato; }
+  }
+  .for-desktop-up() {
+    @media (min-width: 1200px) { background-color: rgb(221, 194, 221); }
+  }
+  .for-desktop-only() {
+    @media (min-width: 1200px) and (max-width: 1799px) {  background-color: @backgroundColor;}
+  }
+  .for-big-desktop-up() {
+    @media (min-width: 1800px)  { background-color: @backgroundColor; }
+  }
+
+
+
+ 
+  
+//   .wrapper {
+//     .for-phone-only();
+//   }
+  
+//   .wrapper {
+//     .for-tablet-portait-only();
+//   }
+  
+//   .wrapper {
+//     .for-tablet-portrait-up();
+//   }
+  
+//   .wrapper {
+//     .for-tablet-landscape-only();
+//   }
+  
+//   .wrapper {
+//     .for-tablet-landscape-up();
+//   }
+  
+//   .wrapper {
+//     .for-desktop-only();
+//   }
+  
+//   .wrapper{
+//     .for-desktop-up();
+//   }
+  
+//   .big-desktop-up {
+//     .for-big-desktop-up();
+//   }
+  
