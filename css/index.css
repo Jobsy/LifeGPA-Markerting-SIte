@@ -341,7 +341,7 @@ main .mainArticle1 header h2 {
   font-weight: 800;
   font-size: 4.4rem;
   line-height: 114%;
-  /* identical to box height, or 50px */
+  /*or 50px */
   display: flex;
   align-items: center;
   text-align: center;
