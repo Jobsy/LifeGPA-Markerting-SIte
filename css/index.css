@@ -409,6 +409,14 @@ main .mainArticle1 div figure p {
   mix-blend-mode: normal;
   opacity: 0.9;
 }
+main .mainArticle1 .horizontalScroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+main .mainArticle1 .horizontalScroll .card {
+  flex: 0 0 auto;
+}
 main .mainArticle2 header {
   display: flex;
   align-items: center;
