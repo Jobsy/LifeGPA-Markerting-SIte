@@ -152,10 +152,11 @@ body {
   flex-direction: column;
   max-width: 1400px;
   width: 100%;
-  background-color: aqua;
 }
 .section1 {
-  background-color: blue;
+  background: linear-gradient(180deg, #C8C9D1 0%, #AAAFB7 98.53%);
+  mix-blend-mode: normal;
+  opacity: 0.76;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,7 +164,7 @@ body {
   width: 100%;
 }
 .section1 header {
-  background-color: red;
+  margin-top: 4%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,33 +173,34 @@ body {
 }
 @media (min-width: 640px) and (max-width: 812px) {
   .section1 header {
-    background-color: teal;
     width: 98%;
   }
 }
 @media (min-width: 415px) and (max-width: 639px) {
   .section1 header {
-    background-color: hotpink;
+    width: 98%;
+  }
+}
+@media (min-width: 320px) and (max-width: 415px) {
+  .section1 header {
     width: 98%;
   }
 }
 .section1 header nav {
-  background-color: yellow;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .section1 header nav figure {
-  background-color: firebrick;
   width: 20%;
 }
 .section1 header nav figure img {
+  background-color: #000000;
   width: 25%;
   height: auto;
 }
 .section1 header nav ul {
-  background-color: aquamarine;
   width: 100%;
   display: flex;
   align-items: center;
@@ -217,8 +219,14 @@ body {
   letter-spacing: 2px;
   color: black;
 }
+@media (min-width: 320px) and (max-width: 639px) {
+  .section1 header nav ul li a {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}
 .section1 .banner {
-  background-color: blanchedalmond;
+  margin: 5% 0;
   width: 80%;
   display: flex;
   align-items: center;
@@ -226,18 +234,20 @@ body {
 }
 @media (min-width: 640px) and (max-width: 812px) {
   .section1 .banner {
-    background-color: teal;
     width: 98%;
   }
 }
 @media (min-width: 415px) and (max-width: 639px) {
   .section1 .banner {
-    background-color: hotpink;
+    width: 98%;
+  }
+}
+@media (min-width: 320px) and (max-width: 415px) {
+  .section1 .banner {
     width: 98%;
   }
 }
 .section1 .banner .bannerText {
-  background-color: olive;
   width: 50%;
 }
 .section1 .banner .bannerText h1 {
@@ -248,6 +258,9 @@ body {
   display: flex;
   align-items: center;
   color: #000000;
+}
+.section1 .banner .bannerText .organize {
+  color: #ffe600;
 }
 .section1 .banner .bannerText h3 {
   font-weight: 500;
@@ -261,7 +274,6 @@ body {
   color: #000000;
 }
 .section1 .banner .bannerText figure {
-  background-color: tomato;
   width: 100%;
   margin-top: 25%;
 }
@@ -269,7 +281,7 @@ body {
   width: 25%;
   height: auto;
 }
-@media (min-width: 415px) and (max-width: 639px) {
+@media (min-width: 320px) and (max-width: 639px) {
   .section1 .banner .bannerText {
     flex: 1;
   }
@@ -281,12 +293,11 @@ body {
     margin-top: 20%;
   }
   .section1 .banner .bannerText figure img {
-    width: 25%;
+    width: 30%;
     height: auto;
   }
 }
 .section1 .banner .bannerBackgroundImage {
-  background-color: indigo;
   width: 50%;
   display: flex;
   align-items: center;
@@ -296,35 +307,35 @@ body {
   width: 100%;
   height: auto;
 }
-@media (min-width: 415px) and (max-width: 639px) {
+@media (min-width: 320px) and (max-width: 639px) {
   .section1 .banner .bannerBackgroundImage {
     display: none;
   }
 }
 main {
-  background-color: hotpink;
   width: 80%;
 }
 @media (min-width: 640px) and (max-width: 812px) {
   main {
-    background-color: teal;
     width: 98%;
   }
 }
 @media (min-width: 415px) and (max-width: 639px) {
   main {
-    background-color: hotpink;
     width: 98%;
   }
 }
-main .mainArticle1 {
-  background-color: rosybrown;
+@media (min-width: 320px) and (max-width: 415px) {
+  main {
+    width: 98%;
+  }
 }
 main .mainArticle1 header {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 3% 0;
 }
 main .mainArticle1 header h2 {
   font-weight: 800;
@@ -351,8 +362,15 @@ main .mainArticle1 header p {
     font-size: 3.5rem;
   }
 }
+@media (min-width: 320px) and (max-width: 414px) {
+  main .mainArticle1 header h2 {
+    font-size: 2.2rem;
+  }
+  main .mainArticle1 header p {
+    font-size: 1.6rem;
+  }
+}
 main .mainArticle1 div {
-  background-color: orange;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -360,7 +378,6 @@ main .mainArticle1 div {
   width: 100%;
 }
 main .mainArticle1 div figure {
-  background-color: forestgreen;
   display: flex;
   align-content: center;
   justify-content: stretch;
@@ -392,15 +409,12 @@ main .mainArticle1 div figure p {
   mix-blend-mode: normal;
   opacity: 0.9;
 }
-main .mainArticle2 {
-  background-color: crimson;
-  width: 100%;
-}
 main .mainArticle2 header {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 5% 0 0 0;
 }
 main .mainArticle2 header h2 {
   font-weight: 800;
@@ -410,28 +424,30 @@ main .mainArticle2 header h2 {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #2F2F2F;
+  color: black;
 }
 @media (min-width: 415px) and (max-width: 639px) {
   main .mainArticle2 header h2 {
     font-size: 3.5rem;
   }
 }
+@media (min-width: 320px) and (max-width: 414px) {
+  main .mainArticle2 header h2 {
+    font-size: 2.5rem;
+  }
+}
 main .mainArticle2 div {
-  background-color: greenyellow;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 main .mainArticle2 div aside {
-  background-color: #6b3485;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 main .mainArticle2 div aside div {
-  background-color: #95cbe0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -457,23 +473,24 @@ main .mainArticle2 div aside div p {
   color: #747E80;
 }
 main .mainArticle2 div figure {
-  background-color: green;
   margin: 5%;
 }
 main .mainArticle2 div figure img {
   width: 100%;
   height: auto;
 }
-@media (min-width: 415px) and (max-width: 639px) {
-  main .mainArticle2 div figure {
-    margin: 1%;
+@media (min-width: 320px) and (max-width: 414px) {
+  main .mainArticle2 div {
+    flex-direction: column;
   }
-  main .mainArticle2 div figure img {
+  main .mainArticle2 div aside div p {
+    font-size: 1.5rem;
+  }
+  main .mainArticle2 figure {
     display: none;
   }
 }
 .contactUs {
-  background-color: darkred;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -482,13 +499,16 @@ main .mainArticle2 div figure img {
 }
 @media (min-width: 640px) and (max-width: 812px) {
   .contactUs {
-    background-color: teal;
     width: 98%;
   }
 }
 @media (min-width: 415px) and (max-width: 639px) {
   .contactUs {
-    background-color: hotpink;
+    width: 98%;
+  }
+}
+@media (min-width: 320px) and (max-width: 415px) {
+  .contactUs {
     width: 98%;
   }
 }
@@ -500,12 +520,12 @@ main .mainArticle2 div figure img {
   align-items: center;
   justify-content: center;
   letter-spacing: 1.75px;
+  margin: 5% 0;
   color: #747E80;
   width: 50%;
   text-align: center;
 }
 .contactUs figure {
-  background-color: sandybrown;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -518,6 +538,7 @@ main .mainArticle2 div figure img {
 }
 .contactUs hr {
   width: 100%;
+  margin: 7% 0;
   border: 1px solid #c2c2c2;
 }
 .contactUs h2 {
@@ -525,6 +546,7 @@ main .mainArticle2 div figure img {
   font-size: 4.4rem;
   line-height: 114%;
   /* identical to box height, or 50px */
+  margin-bottom: -3%;
   display: flex;
   align-items: center;
   text-align: center;
@@ -532,14 +554,13 @@ main .mainArticle2 div figure img {
   color: #2F2F2F;
 }
 .contactUs .usersInfo {
-  background-color: green;
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 60%;
+  margin-bottom: 3%;
 }
 .contactUs .usersInfo input {
-  background: #F3F3F3;
   max-width: 180px;
   padding: 2%;
   border-radius: 40px;
@@ -571,38 +592,69 @@ main .mainArticle2 div figure img {
   letter-spacing: 1.75px;
   color: #000000;
 }
+@media (min-width: 320px) and (max-width: 639px) {
+  .contactUs .usersInfo {
+    flex-direction: column;
+  }
+  .contactUs .usersInfo input {
+    margin: 2% 0;
+  }
+  .contactUs .usersInfo button {
+    margin: 2% 0;
+  }
+}
 @media (min-width: 415px) and (max-width: 639px) {
   .contactUs h2 {
     font-size: 4rem;
   }
+  .contactUs p {
+    width: 90%;
+  }
+}
+@media (min-width: 320px) and (max-width: 414px) {
+  .contactUs h2 {
+    font-size: 3rem;
+  }
+  .contactUs p {
+    width: 90%;
+  }
 }
 footer {
-  background-color: violet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+footer .footer {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   width: 80%;
+  padding: 5% 0;
 }
 @media (min-width: 640px) and (max-width: 812px) {
-  footer {
-    background-color: teal;
+  footer .footer {
     width: 98%;
   }
 }
 @media (min-width: 415px) and (max-width: 639px) {
-  footer {
-    background-color: hotpink;
+  footer .footer {
     width: 98%;
   }
 }
-footer div {
+@media (min-width: 320px) and (max-width: 415px) {
+  footer .footer {
+    width: 98%;
+  }
+}
+footer .footer div {
   flex: 1;
 }
-footer div img {
+footer .footer div img {
   width: 25%;
   height: auto;
 }
-footer div p {
+footer .footer div p {
   font-family: Playfair Display;
   font-weight: normal;
   font-size: 1.4rem;
@@ -614,31 +666,45 @@ footer div p {
   mix-blend-mode: normal;
   opacity: 0.8;
 }
-footer div .boldP {
+footer .footer div .boldP {
   font-weight: bold;
 }
-footer .socialMedia {
+footer .footer .socialMedia {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-footer .socialMedia img {
+footer .footer .socialMedia img {
   background-color: #000000;
   width: 7%;
   margin-right: 10%;
 }
-footer .socialMedia .fb,
-footer .socialMedia .tbl {
+footer .footer .socialMedia .fb,
+footer .footer .socialMedia .tbl {
   background-color: orange;
   width: 4%;
 }
 @media (min-width: 415px) and (max-width: 639px) {
-  footer .socialMedia img {
+  footer .footer .socialMedia img {
     width: 17%;
     margin-right: 5%;
   }
-  footer .socialMedia .fb,
-  footer .socialMedia .tbl {
+  footer .footer .socialMedia .fb,
+  footer .footer .socialMedia .tbl {
+    background-color: orange;
+    width: 10%;
+  }
+}
+@media (min-width: 320px) and (max-width: 639px) {
+  footer .footer {
+    flex-direction: column;
+  }
+  footer .footer .socialMedia img {
+    width: 17%;
+    margin-right: 5%;
+  }
+  footer .footer .socialMedia .fb,
+  footer .footer .socialMedia .tbl {
     background-color: orange;
     width: 10%;
   }
