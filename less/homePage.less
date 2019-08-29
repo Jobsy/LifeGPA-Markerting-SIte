@@ -246,9 +246,9 @@ main {
 
         div {
             display: flex;
-            align-content: center;
-            justify-content: center;
-            flex-wrap: wrap;
+            // align-content: center;
+            // justify-content: center;
+            // flex-wrap: wrap;
             width: 100%;
 
             figure {
@@ -256,7 +256,8 @@ main {
                 align-content: center;
                 justify-content: stretch;
                 flex-direction: column;
-                max-width: 320px;
+                // max-width: 320px;
+                min-width: 250px;
                 margin: 2% 1%;
 
                 figcaption {
@@ -291,12 +292,16 @@ main {
 
         .horizontalScroll {
             display: flex;
-            flex-wrap: nowrap;
+            // flex-wrap: nowrap;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar {
+                display: none;
+              }
 
-            .card {
-                flex: 0 0 auto;
-            }
+            // .card {
+            //     flex: 0 0 auto;
+            // }
         }
 
     }

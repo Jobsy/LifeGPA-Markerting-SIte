@@ -372,9 +372,6 @@ main .mainArticle1 header p {
 }
 main .mainArticle1 div {
   display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
   width: 100%;
 }
 main .mainArticle1 div figure {
@@ -382,7 +379,7 @@ main .mainArticle1 div figure {
   align-content: center;
   justify-content: stretch;
   flex-direction: column;
-  max-width: 320px;
+  min-width: 250px;
   margin: 2% 1%;
 }
 main .mainArticle1 div figure figcaption {
@@ -411,11 +408,11 @@ main .mainArticle1 div figure p {
 }
 main .mainArticle1 .horizontalScroll {
   display: flex;
-  flex-wrap: nowrap;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
-main .mainArticle1 .horizontalScroll .card {
-  flex: 0 0 auto;
+main .mainArticle1 .horizontalScroll::-webkit-scrollbar {
+  display: none;
 }
 main .mainArticle2 header {
   display: flex;
