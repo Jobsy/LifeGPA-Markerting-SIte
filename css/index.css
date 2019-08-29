@@ -480,14 +480,6 @@ main .mainArticle2 div aside div p {
   /* or  28px*/
   color: #747E80;
 }
-main .mainArticle2 div .horizontalScroll2 {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-main .mainArticle2 div .horizontalScroll2 .card2 {
-  flex: 0 0 auto;
-}
 main .mainArticle2 div figure {
   margin: 5%;
 }
@@ -505,6 +497,14 @@ main .mainArticle2 div figure img {
   main .mainArticle2 figure {
     display: none;
   }
+}
+main .mainArticle2 .horizontalScroll2 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+main .mainArticle2 .horizontalScroll2 .card2 {
+  flex: 0 0 auto;
 }
 .contactUs {
   display: flex;
