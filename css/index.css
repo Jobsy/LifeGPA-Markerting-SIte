@@ -247,8 +247,8 @@ select:focus {
 }
 @media (min-width: 320px) and (max-width: 639px) {
   .section1 header nav ul li a {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
   }
 }
 .section1 {
@@ -327,7 +327,7 @@ select:focus {
     margin-top: 20%;
   }
   .section1 .banner .bannerText figure img {
-    width: 30%;
+    min-width: 30%;
     height: auto;
   }
 }
@@ -469,6 +469,7 @@ main .mainArticle2 header h2 {
 @media (min-width: 320px) and (max-width: 414px) {
   main .mainArticle2 header h2 {
     font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 main .mainArticle2 div {
