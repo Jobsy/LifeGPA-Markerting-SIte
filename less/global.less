@@ -1,20 +1,24 @@
 // General Styles
+
 * {
     box-sizing: border-box;
   }
   
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
   html {
     font-size: 62.5%;
   }
   
   html, body {
-    font-family: 'Ubuntu', sans-serif;
-    color: @main-font-color;
+    font-family: 'Raleway', 'Ubuntu', sans-serif;
   }
   
-  h1, h2, h3, h4, h5 {
-    font-family: 'Russo One', sans-serif;
-    color: @header-font-color;
+  h1, h2, h3, h4, h5, p {
+    font-family: 'Raleway', 'Russo One', sans-serif;
+    font-style: normal;
   }
   
   h1 {
@@ -31,24 +35,35 @@
   
   p {
     font-size: 1.6rem;
-    line-height: 1.4;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: @regent-grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    mix-blend-mode: normal;
+    opacity: 0.9;
   }
   
   a {
-    font-size: 1.8rem;
-    color: @header-font-color;
+    font-size: 1.6rem;
+    color: @nav-font;
     text-decoration: none;
+    line-height: 1.4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
     
-    &:hover {
-      .hover();
-    }
+    // &:hover {
+    //   .hover();
+    // }
   
   }
+
+  button, input:focus, textarea:focus, select:focus{
+    outline: none;
+}
   
-//   .container {
-//     max-width: 800px;
-//     width: 100%;
-//     margin: 0 auto;  
-//   }
-  
+
   

@@ -131,14 +131,64 @@ button {
   padding: 0;
   margin: 0;
 }
-html {
+* {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Raleway', 'Ubuntu', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: 'Raleway', 'Russo One', sans-serif;
+  font-style: normal;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: #747E80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.9;
+}
+a {
+  font-size: 1.6rem;
+  color: #000000;
+  text-decoration: none;
+  line-height: 1.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+button,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
 .wrapper {
   display: flex;
@@ -149,18 +199,8 @@ html {
   width: 100%;
   margin: 0 auto;
 }
-.section1 {
-  background: linear-gradient(180deg, #C8C9D1 0%, #AAAFB7 98.53%);
-  mix-blend-mode: normal;
-  opacity: 0.76;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
 .section1 header {
-  margin-top: 4%;
+  margin: 3% 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,26 +245,11 @@ html {
 .section1 header nav ul li {
   margin: 0 2%;
 }
-.section1 header nav ul li a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 14px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 2px;
-  color: black;
-}
 @media (min-width: 320px) and (max-width: 639px) {
   .section1 header nav ul li a {
     font-size: 1.5rem;
     letter-spacing: 1px;
   }
-}
-body {
-  height: 100%;
-  font-family: Raleway;
-  font-style: normal;
 }
 .section1 {
   background: linear-gradient(180deg, #C8C9D1 0%, #AAAFB7 98.53%);
@@ -237,7 +262,7 @@ body {
   width: 100%;
 }
 .section1 .banner {
-  margin: 5% 0;
+  margin: 2% 0 5% 0;
   width: 80%;
   display: flex;
   align-items: center;
@@ -265,7 +290,6 @@ body {
   font-weight: 800;
   font-size: 6.4rem;
   line-height: 106%;
-  /* or 64px */
   display: flex;
   align-items: center;
   color: #000000;
@@ -277,7 +301,6 @@ body {
   font-weight: 500;
   font-size: 2rem;
   line-height: 162.5%;
-  /* or 25px*/
   display: flex;
   align-items: center;
   letter-spacing: -0.1px;
@@ -346,27 +369,19 @@ main .mainArticle1 header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 3% 0;
+  margin: 10% 0 3% 0;
 }
 main .mainArticle1 header h2 {
   font-weight: 800;
   font-size: 4.4rem;
-  line-height: 114%;
-  /*or 50px */
+  line-height: 5rem;
   display: flex;
   align-items: center;
   text-align: center;
   color: #2F2F2F;
 }
 main .mainArticle1 header p {
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 156%;
-  /* or 28px */
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #747E80;
+  line-height: 2.8rem;
 }
 @media (min-width: 415px) and (max-width: 639px) {
   main .mainArticle1 header h2 {
@@ -376,9 +391,6 @@ main .mainArticle1 header p {
 @media (min-width: 320px) and (max-width: 414px) {
   main .mainArticle1 header h2 {
     font-size: 2.2rem;
-  }
-  main .mainArticle1 header p {
-    font-size: 1.6rem;
   }
 }
 main .mainArticle1 div {
@@ -390,40 +402,30 @@ main .mainArticle1 div figure {
   align-content: center;
   justify-content: stretch;
   flex-direction: column;
-  min-width: 250px;
+  max-width: 30rem;
   margin: 2% 1%;
 }
 main .mainArticle1 div figure figcaption {
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 2rem;
-  line-height: 19px;
-  /* identical to box height */
+  line-height: 1.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  letter-spacing: 2px;
   color: #000000;
   margin: 0 0 2% 0;
 }
 main .mainArticle1 div figure p {
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 162%;
-  /* or 26px */
-  display: flex;
-  align-items: center;
-  text-align: center;
-  mix-blend-mode: normal;
-  opacity: 0.9;
+  line-height: 2.6rem;
+  font-size: 1.5rem;
 }
 main .mainArticle1 .horizontalScroll {
+  margin: 6% 0 2% 0;
   display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-main .mainArticle1 .horizontalScroll::-webkit-scrollbar {
-  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 main {
   width: 80%;
@@ -453,12 +455,11 @@ main .mainArticle2 header {
 main .mainArticle2 header h2 {
   font-weight: 800;
   font-size: 4.4rem;
-  line-height: 114%;
-  /* identical to box height, or 50px*/
+  line-height: 5rem;
   display: flex;
   align-items: center;
   text-align: center;
-  color: black;
+  color: #000000;
 }
 @media (min-width: 415px) and (max-width: 639px) {
   main .mainArticle2 header h2 {
@@ -487,23 +488,20 @@ main .mainArticle2 div aside div {
   justify-content: flex-start;
   flex-direction: column;
   margin: 6% 0;
-  max-width: 320px;
+  max-width: 32rem;
 }
 main .mainArticle2 div aside div h3 {
   font-weight: bold;
   font-size: 2.2rem;
-  line-height: 127%;
-  /* identical to box height, or 28px */
+  line-height: 2.8rem;
   display: flex;
   align-items: center;
   color: #000000;
 }
 main .mainArticle2 div aside div p {
-  font-weight: 500;
+  text-align: left;
   font-size: 1.8rem;
-  line-height: 156%;
-  /* or  28px*/
-  color: #747E80;
+  line-height: 2.8rem;
 }
 main .mainArticle2 div figure {
   margin: 5%;
@@ -512,7 +510,7 @@ main .mainArticle2 div figure img {
   width: 100%;
   height: auto;
 }
-@media (min-width: 320px) and (max-width: 414px) {
+@media (min-width: 320px) and (max-width: 639px) {
   main .mainArticle2 div {
     flex-direction: column;
   }
@@ -527,9 +525,6 @@ main .mainArticle2 .horizontalScroll2 {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-}
-main .mainArticle2 .horizontalScroll2 .card2 {
-  flex: 0 0 auto;
 }
 .contactUs {
   display: flex;
@@ -554,17 +549,11 @@ main .mainArticle2 .horizontalScroll2 .card2 {
   }
 }
 .contactUs p {
-  font-weight: 500;
   font-size: 1.4rem;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 1.75px;
+  line-height: 1.6rem;
+  letter-spacing: 0.175rem;
   margin: 5% 0;
-  color: #747E80;
   width: 50%;
-  text-align: center;
 }
 .contactUs figure {
   display: flex;
@@ -585,13 +574,12 @@ main .mainArticle2 .horizontalScroll2 .card2 {
 .contactUs h2 {
   font-weight: 900;
   font-size: 4.4rem;
-  line-height: 114%;
-  /* identical to box height, or 50px */
+  line-height: 5rem;
   margin-bottom: -3%;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: -0.244444px;
+  letter-spacing: -0.0244444rem;
   color: #2F2F2F;
 }
 .contactUs .usersInfo {
@@ -602,12 +590,12 @@ main .mainArticle2 .horizontalScroll2 .card2 {
   margin-bottom: 3%;
 }
 .contactUs .usersInfo input {
-  max-width: 180px;
+  max-width: 18rem;
   padding: 2%;
-  border-radius: 40px;
+  border-radius: 4rem;
 }
 .contactUs .usersInfo ::placeholder {
-  width: 138px;
+  width: 13.8rem;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 16px;
@@ -618,19 +606,19 @@ main .mainArticle2 .horizontalScroll2 .card2 {
   opacity: 0.7;
 }
 .contactUs .usersInfo button {
-  background: #FFEB38;
-  border-radius: 40px;
-  max-width: 210px;
+  background: #ffff00;
+  border-radius: 4rem;
+  max-width: 21rem;
   padding: 2%;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.198681);
   font-weight: bold;
   font-size: 1.4rem;
-  line-height: 16px;
+  line-height: 1.6rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
-  letter-spacing: 1.75px;
+  letter-spacing: 0.175rem;
   color: #000000;
 }
 @media (min-width: 320px) and (max-width: 639px) {
@@ -697,18 +685,19 @@ footer .footer div img {
 }
 footer .footer div p {
   font-family: Playfair Display;
-  font-weight: normal;
-  font-size: 1.4rem;
-  line-height: 26px;
-  /* or 162% */
-  display: flex;
-  align-items: center;
+  line-height: 2.6rem;
+  justify-content: flex-start;
+  text-align: left;
   color: #FFFFFF;
-  mix-blend-mode: normal;
-  opacity: 0.8;
 }
 footer .footer div .boldP {
   font-weight: bold;
+}
+@media (min-width: 320px) and (max-width: 414px) {
+  footer .footer div {
+    width: 190px;
+    margin: 10px;
+  }
 }
 footer .footer .socialMedia {
   display: flex;
@@ -716,13 +705,11 @@ footer .footer .socialMedia {
   justify-content: flex-start;
 }
 footer .footer .socialMedia img {
-  background-color: #000000;
   width: 7%;
   margin-right: 10%;
 }
 footer .footer .socialMedia .fb,
 footer .footer .socialMedia .tbl {
-  background-color: orange;
   width: 4%;
 }
 @media (min-width: 415px) and (max-width: 639px) {
@@ -732,13 +719,12 @@ footer .footer .socialMedia .tbl {
   }
   footer .footer .socialMedia .fb,
   footer .footer .socialMedia .tbl {
-    background-color: orange;
     width: 10%;
   }
 }
 @media (min-width: 320px) and (max-width: 639px) {
   footer .footer {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   footer .footer .socialMedia img {
     width: 17%;
@@ -746,7 +732,6 @@ footer .footer .socialMedia .tbl {
   }
   footer .footer .socialMedia .fb,
   footer .footer .socialMedia .tbl {
-    background-color: orange;
     width: 10%;
   }
 }

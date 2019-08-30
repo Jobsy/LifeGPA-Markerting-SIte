@@ -1,12 +1,15 @@
 
 
 footer {
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.9);
+
+    background: @black-with-radiant;
 
     .footer {
+
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -27,67 +30,62 @@ footer {
             
             p{
                 font-family: Playfair Display;
-                // font-style: normal;
-                font-weight: normal;
-                font-size: 1.4rem;
-                line-height: 26px;
-                /* or 162% */
-
-                display: flex;
-                align-items: center;
-
-                color: #FFFFFF;
-
-                mix-blend-mode: normal;
-                opacity: 0.8;
+                line-height: 2.6rem;          
+                justify-content: flex-start;
+                text-align: left;
+                color: @white;
             }
 
             .boldP {
                 font-weight: bold;
             }
-
+            @media (min-width: 320px) and (max-width: 414px) {
+                width: 190px;
+                margin: 10px;
+                // justify-content: center;
+                // text-align: center;
+            }
         }
+
         .socialMedia {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             
             img {
-                background-color: #000000;
                 width: 7%;
-                // height: 5%;
                 margin-right: 10%;
             }
             
             .fb, .tbl {
-                    background-color: orange;
-                    width: 4%;
-                } 
+                width: 4%;
+            } 
 
-                @media (min-width: 415px) and (max-width: 639px) {
-                    img {
-                        width: 17%;
-                        margin-right: 5%;
-                    }
-                    
-                    .fb, .tbl {
-                            background-color: orange;
-                            width: 10%;
-                        } 
-                }
-        }
-
-        @media (min-width: 320px) and (max-width: 639px) {
-            flex-direction: column;
-            
-            .socialMedia {
+            @media (min-width: 415px) and (max-width: 639px) {
+                
                 img {
                     width: 17%;
                     margin-right: 5%;
                 }
                 
                 .fb, .tbl {
-                    background-color: orange;
+                    width: 10%;
+                } 
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            // width: 60%;
+            // flex-direction: column;
+            flex-wrap: wrap;
+            .socialMedia {
+                
+                img {
+                    width: 17%;
+                    margin-right: 5%;
+                }
+                
+                .fb, .tbl {
                     width: 10%;
                 } 
             }
