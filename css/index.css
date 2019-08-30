@@ -140,11 +140,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-body {
-  height: 100%;
-  font-family: Raleway;
-  font-style: normal;
-}
 .wrapper {
   display: flex;
   align-items: center;
@@ -152,6 +147,7 @@ body {
   flex-direction: column;
   max-width: 1400px;
   width: 100%;
+  margin: 0 auto;
 }
 .section1 {
   background: linear-gradient(180deg, #C8C9D1 0%, #AAAFB7 98.53%);
@@ -225,6 +221,21 @@ body {
     letter-spacing: 1px;
   }
 }
+body {
+  height: 100%;
+  font-family: Raleway;
+  font-style: normal;
+}
+.section1 {
+  background: linear-gradient(180deg, #C8C9D1 0%, #AAAFB7 98.53%);
+  mix-blend-mode: normal;
+  opacity: 0.76;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
 .section1 .banner {
   margin: 5% 0;
   width: 80%;
@@ -260,7 +271,7 @@ body {
   color: #000000;
 }
 .section1 .banner .bannerText .organize {
-  color: #ffe600;
+  color: #ffff00;
 }
 .section1 .banner .bannerText h3 {
   font-weight: 500;
@@ -413,6 +424,24 @@ main .mainArticle1 .horizontalScroll {
 }
 main .mainArticle1 .horizontalScroll::-webkit-scrollbar {
   display: none;
+}
+main {
+  width: 80%;
+}
+@media (min-width: 640px) and (max-width: 812px) {
+  main {
+    width: 98%;
+  }
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  main {
+    width: 98%;
+  }
+}
+@media (min-width: 320px) and (max-width: 415px) {
+  main {
+    width: 98%;
+  }
 }
 main .mainArticle2 header {
   display: flex;

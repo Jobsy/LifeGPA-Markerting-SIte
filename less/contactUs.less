@@ -1,0 +1,142 @@
+.contactUs {   
+    .my-flex-container();
+
+    width: 80%;
+    .for-tablet-portait-only();
+    .for-phone-portait-only();
+    .for-phone-only();
+   
+    p {
+        font-weight: 500;
+        // font-size: 87.5%;
+        font-size: 1.4rem;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1.75px;
+
+        margin: 5% 0;
+
+
+        color: #747E80;
+        width: 50%;
+        text-align: center;
+    }
+
+
+    figure {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+
+        flex-wrap: wrap;       
+        
+        img {
+            opacity: 0.25;
+            margin: 0 2%;
+        }
+    }
+
+    hr {
+        width: 100%;
+        margin: 7% 0;
+        border: 1px solid #c2c2c2;
+    }
+
+    h2 {
+        font-weight: 900;
+        font-size: 4.4rem;
+        // font-size: 44px;
+        line-height: 114%;
+        /* identical to box height, or 50px */
+
+        margin-bottom: -3%;
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.244444px;
+
+        color: #2F2F2F;
+    }
+
+    .usersInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 60%;
+        margin-bottom: 3%;
+
+
+        input {
+            max-width: 180px;
+            // height: 50px;
+            padding: 2%;
+            border-radius: 40px;
+        }
+
+        ::placeholder {
+            width:  138px;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 16px;
+            display: flex;
+            align-items: flex-end;
+
+            color: #303234;
+
+            mix-blend-mode: normal;
+            opacity: 0.7;
+        }
+
+        button {
+            background: #FFEB38;
+            border-radius: 40px;
+
+            max-width: 210px;
+            padding: 2%;
+
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.198681);
+
+            font-weight: bold;
+            font-size: 1.4rem;
+            line-height: 16px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            letter-spacing: 1.75px;
+
+            color: #000000;
+        }
+
+        @media (min-width: 320px) and (max-width: 639px) {
+            flex-direction: column;
+            input {
+                margin: 2% 0;
+            }
+            button {
+                margin: 2% 0;
+            }
+        }
+    }
+    @media (min-width: 415px) and (max-width: 639px) {
+        h2 {
+            font-size: 4rem;
+        }
+        p {
+            width: 90%;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 414px) {
+        h2 {
+            font-size: 3rem;
+        }
+        p {
+            width: 90%;
+        }
+    }
+}
