@@ -61,7 +61,7 @@
                     height: auto;
                 }
             }
-            // @media (min-width: 415px) and (max-width: 639px) {
+            
             @media (min-width: 320px) and (max-width: 639px) {  
                
                 flex: 1;
@@ -144,25 +144,29 @@ main {
         }
 
         div {
+            
             display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            
             width: 100%;
 
             figure {
+
                 display: flex;
                 align-content: center;
                 justify-content: stretch;
                 flex-direction: column;
                 max-width: 30rem;
-                // min-width: 250px;
                 margin: 2% 1%;
 
                 figcaption {
+                    .my-flex-container();
+                    
                     font-weight: lighter;
                     font-size: 2rem;
-                    // font-size: 16px;
                     line-height: 1.9rem;
-                    .my-flex-container();
-                    // letter-spacing: 2px;
                     color: @black;
                     margin: 0 0 2% 0;
                 }
@@ -174,19 +178,25 @@ main {
             }
         }
 
-        .horizontalScroll {
-            margin: 6% 0 2% 0;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            // flex-direction: column;
-            flex-wrap: wrap;
-            // overflow-x: auto;
-            // -webkit-overflow-scrolling: touch;
-            // &::-webkit-scrollbar {
-            //     display: none;
-            // }
+        @media (min-width: 320px) and (max-width: 620px) {
+            
+            .horizontalScroll {
+                margin: 6% 0 2% 0;
+                display: flex;
+                align-items: stretch;
+                justify-content: unset;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                
+                -webkit-overflow-scrolling: touch;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            
+                figure {
+                min-width:  315px;    
+                }
+            }
         }
-       
     }
 }

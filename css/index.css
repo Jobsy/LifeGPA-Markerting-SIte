@@ -395,6 +395,9 @@ main .mainArticle1 header p {
 }
 main .mainArticle1 div {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 main .mainArticle1 div figure {
@@ -406,13 +409,13 @@ main .mainArticle1 div figure {
   margin: 2% 1%;
 }
 main .mainArticle1 div figure figcaption {
-  font-weight: lighter;
-  font-size: 2rem;
-  line-height: 1.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-weight: lighter;
+  font-size: 2rem;
+  line-height: 1.9rem;
   color: #000000;
   margin: 0 0 2% 0;
 }
@@ -420,12 +423,22 @@ main .mainArticle1 div figure p {
   line-height: 2.6rem;
   font-size: 1.5rem;
 }
-main .mainArticle1 .horizontalScroll {
-  margin: 6% 0 2% 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
+@media (min-width: 320px) and (max-width: 620px) {
+  main .mainArticle1 .horizontalScroll {
+    margin: 6% 0 2% 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: unset;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  main .mainArticle1 .horizontalScroll::-webkit-scrollbar {
+    display: none;
+  }
+  main .mainArticle1 .horizontalScroll figure {
+    min-width: 315px;
+  }
 }
 main {
   width: 80%;
